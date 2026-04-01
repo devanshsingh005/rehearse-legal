@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Re-Hearse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #6366f1; --bg: #ffffff; --surface: #f8fafc; --text: #1e293b; --text-light: #64748b; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); margin: 0; background: var(--bg); }
+        .header { background: var(--surface); padding: 4rem 2rem; text-align: center; border-bottom: 1px solid #e2e8f0; }
+        .header h1 { font-size: 2.5rem; margin: 0; font-weight: 700; }
+        .last-updated { color: var(--text-light); margin-top: 0.5rem; display: block; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 3rem 2rem; display: flex; gap: 4rem; }
+        aside { width: 250px; position: sticky; top: 2rem; height: fit-content; }
+        aside nav ul { list-style: none; padding: 0; margin: 0; }
+        aside nav li { margin-bottom: 1rem; }
+        aside nav a { text-decoration: none; color: var(--text-light); font-size: 0.9rem; font-weight: 600; transition: 0.2s; }
+        aside nav a:hover { color: var(--primary); }
+        main { flex: 1; }
+        section { margin-bottom: 3rem; }
+        h2 { font-size: 1.5rem; color: var(--text); border-bottom: 2px solid var(--surface); padding-bottom: 0.5rem; margin-top: 0; }
+        h3 { font-size: 1.15rem; color: var(--primary); margin: 1.5rem 0 0.5rem 0; }
+        p, li { margin-bottom: 1rem; color: #475569; }
+        @media (max-width: 850px) { .container { flex-direction: column; } aside { display: none; } }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <h1>Privacy Policy for Re-Hearse</h1>
+    <span class="last-updated">Last Updated: April 2026</span>
+</header>
+
+<div class="container">
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="#intro">1. Introduction</a></li>
+                <li><a href="#collection">2. Information Collection</a></li>
+                <li><a href="#usage">3. How We Use Information</a></li>
+                <li><a href="#thirdparty">4. Third-Party Processors</a></li>
+                <li><a href="#retention">5. Retention & Deletion</a></li>
+                <li><a href="#rights">6. Your Data Rights</a></li>
+                <li><a href="#security">7. Security</a></li>
+                <li><a href="#children">8. Children's Privacy</a></li>
+                <li><a href="#contact">10. Contact Us</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <section id="intro">
+            <h2>1. Introduction</h2>
+            <p>Welcome to <strong>Re-Hearse</strong>. We are committed to protecting your personal information and your right to privacy. This Privacy Policy applies to all information collected through our mobile application ("App") and any related services.</p>
+            <p>We have drafted this policy in plain English to ensure you understand how your data is handled. By using Re-Hearse, you agree to the collection and use of information in accordance with this policy.</p>
+        </section>
+
+        <section id="collection">
+            <h2>2. Information We Collect</h2>
+            <p>We collect information that you provide to us directly and information that is collected automatically when you use the App.</p>
+            
+            <h3>A. Information You Provide to Us</h3>
+            <ul>
+                <li><strong>Account Data:</strong> When you sign up using <strong>Apple Sign-In</strong> or <strong>Google Sign-In</strong>, we receive information from the authentication provider, typically including your unique identifier (UID), name, and email address. This is used solely for authentication and essential service communications.</li>
+                <li><strong>User-Generated Content:</strong> To use our core features, you upload sheet music (images or PDFs). These files are stored and processed to provide you with playable audio.</li>
+                <li><strong>Support Communications:</strong> If you contact us via email, we collect your email address and any information you provide in the message to resolve your inquiry.</li>
+            </ul>
+
+            <h3>B. Information Collected Automatically</h3>
+            <ul>
+                <li><strong>Device Information:</strong> We collect information about the device you use to access the App, such as the device model, operating system version, and unique device identifiers.</li>
+                <li><strong>Usage Data:</strong> We may collect logs of how you interact with the app (e.g., features used, session duration) to improve the user experience and troubleshoot technical issues.</li>
+            </ul>
+        </section>
+
+        <section id="usage">
+            <h2>3. How We Use Your Information</h2>
+            <p>We use the information we collect for several purposes:</p>
+            <ul>
+                <li><strong>Authentication:</strong> To manage your account and identify you across sessions using <strong>Supabase Auth</strong>.</li>
+                <li><strong>Service Delivery:</strong> To store and retrieve your uploaded sheet music and generated audio using <strong>Supabase Storage</strong> and <strong>Database</strong>.</li>
+                <li><strong>Core Functionality:</strong> To process your uploaded content and convert it into playable audio.</li>
+                <li><strong>Communication:</strong> To send you service-related notifications or respond to your support requests.</li>
+                <li><strong>Safety & Security:</strong> To detect and prevent fraud, abuse, or unauthorized access.</li>
+            </ul>
+        </section>
+
+        <section id="thirdparty">
+            <h2>4. Third-Party Data Processors</h2>
+            <p><strong>We do not sell your data.</strong> However, we use trusted third-party service providers to help us operate:</p>
+            <ul>
+                <li><strong>Supabase:</strong> Our primary backend provider for authentication, database, and cloud storage. Your data is stored securely on their infrastructure.</li>
+                <li><strong>Authentication Providers:</strong> Apple and Google provide the authentication tokens used to secure your account.</li>
+            </ul>
+        </section>
+
+        <section id="retention">
+            <h2>5. Data Retention & Account Deletion</h2>
+            <p>We retain your personal information only for as long as necessary to provide the services you have requested.</p>
+            <ul>
+                <li><strong>Account Deletion:</strong> You have the right to delete your account at any time. When you delete your account through the App settings, we will permanently remove your profile, account data, and all uploaded content from our active databases and storage buckets within 30 days.</li>
+                <li><strong>User Content Deletion:</strong> You can delete individual files at any time, which removes them from our storage immediately.</li>
+            </ul>
+        </section>
+
+        <section id="rights">
+            <h2>6. Your Data Rights</h2>
+            <p>Depending on your location (e.g., GDPR in Europe, CCPA in California), you may have the following rights:</p>
+            <ul>
+                <li><strong>Access & Portability:</strong> You can request a copy of the data we hold about you.</li>
+                <li><strong>Correction:</strong> You can request that we update or correct your information.</li>
+                <li><strong>Deletion:</strong> You can request that we delete your personal data.</li>
+            </ul>
+            <p>To exercise these rights, please contact us at <strong>devansh.singh20045@gmail.com</strong>.</p>
+        </section>
+
+        <section id="security">
+            <h2>7. Security</h2>
+            <p>We use commercially reasonable security measures to protect your data during transmission (HTTPS/SSL) and at rest (Encryption provided by Supabase). However, no method of transmission is 100% secure, and we cannot guarantee absolute security.</p>
+        </section>
+
+        <section id="children">
+            <h2>8. Children's Privacy</h2>
+            <p>Re-Hearse is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If we discover a user is under this age, we will delete their account and data immediately.</p>
+        </section>
+
+        <section id="contact">
+            <h2>10. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us:</p>
+            <p><strong>Email:</strong> devansh.singh20045@gmail.com</p>
+        </section>
+    </main>
+</div>
+
+</body>
+</html>
