@@ -6,32 +6,119 @@
     <title>Privacy Policy | Re-Hearse</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <!-- Lightweight navbar/cursor script — no GSAP needed on sub-pages -->
+    <script defer src="../subpage.js"></script>
     <style>
-        :root { --primary: #6366f1; --bg: #ffffff; --surface: #f8fafc; --text: #1e293b; --text-light: #64748b; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); margin: 0; background: var(--bg); }
-        .header { background: var(--surface); padding: 4rem 2rem; text-align: center; border-bottom: 1px solid #e2e8f0; }
+        :root {
+            --primary: #ff9900;
+            --primary-deep: #ff6b00;
+            --bg: #0a0a0a;
+            --surface: rgba(255, 255, 255, 0.03);
+            --surface-strong: rgba(255, 255, 255, 0.05);
+            --text: #f0ede8;
+            --text-light: #b4aba2;
+            --border: rgba(255, 153, 0, 0.16);
+        }
+
+        /* ===== LIGHT MODE ===== */
+        body.light-mode {
+            --text: #1a1a1a;
+            --text-light: #5a5450;
+            --bg: #FAFAF8;
+            --surface: rgba(0, 0, 0, 0.03);
+            --surface-strong: rgba(0, 0, 0, 0.05);
+            --border: rgba(239, 148, 8, 0.18);
+        }
+        body.light-mode {
+            background-color: #FAFAF8 !important;
+            background-image:
+                radial-gradient(circle at top left, rgba(255, 153, 0, 0.07) 0%, transparent 30%),
+                radial-gradient(circle at bottom right, rgba(255, 107, 0, 0.04) 0%, transparent 26%) !important;
+            color: #1a1a1a;
+        }
+        body.light-mode .header {
+            background: rgba(0, 0, 0, 0.02);
+        }
+        body.light-mode .callout {
+            background: rgba(0, 0, 0, 0.04);
+        }
+        body.light-mode h2 {
+            color: #1a1a1a;
+            border-bottom-color: rgba(0, 0, 0, 0.08);
+        }
+        body.light-mode h3 {
+            color: var(--primary);
+        }
+        body.light-mode strong {
+            color: #1a1a1a;
+        }
+        body.light-mode aside nav a {
+            color: #5a5450;
+        }
+        body.light-mode aside nav a:hover {
+            color: var(--primary);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            margin: 0;
+            background-color: var(--bg);
+            background-image:
+                radial-gradient(circle at top left, rgba(255, 153, 0, 0.12) 0%, transparent 30%),
+                radial-gradient(circle at bottom right, rgba(255, 107, 0, 0.08) 0%, transparent 26%);
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+        .header { background: var(--surface); padding: 8rem 2rem 4rem; text-align: center; border-bottom: 1px solid var(--border); backdrop-filter: blur(14px); transition: background 0.4s ease; }
         .header h1 { font-size: 2.5rem; margin: 0; font-weight: 700; }
         .last-updated { color: var(--text-light); margin-top: 0.5rem; display: block; }
         .container { max-width: 1000px; margin: 0 auto; padding: 3rem 2rem; display: flex; gap: 4rem; }
-        aside { width: 250px; position: sticky; top: 2rem; height: fit-content; }
+        aside { width: 250px; position: sticky; top: 100px; height: fit-content; }
         aside nav ul { list-style: none; padding: 0; margin: 0; }
         aside nav li { margin-bottom: 1rem; }
-        aside nav a { text-decoration: none; color: var(--text-light); font-size: 0.9rem; font-weight: 600; transition: 0.2s; }
+        aside nav a { text-decoration: none; color: var(--text-light); font-size: 0.9rem; font-weight: 600; transition: color 0.3s ease; }
         aside nav a:hover { color: var(--primary); }
         main { flex: 1; }
         section { margin-bottom: 3rem; }
-        h2 { font-size: 1.5rem; color: var(--text); border-bottom: 2px solid var(--surface); padding-bottom: 0.5rem; margin-top: 0; }
+        h2 { font-size: 1.5rem; color: var(--text); border-bottom: 2px solid rgba(255, 255, 255, 0.06); padding-bottom: 0.5rem; margin-top: 0; transition: color 0.4s ease, border-color 0.4s ease; }
         h3 { font-size: 1.15rem; color: var(--primary); margin: 1.5rem 0 0.5rem 0; }
-        p, li { margin-bottom: 1rem; color: #475569; }
-        .callout { background: #eef2ff; border-left: 4px solid var(--primary); padding: 1.25rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; }
-        .callout-title { font-weight: 700; display: block; margin-bottom: 0.25rem; color: var(--text); }
+        p, li { margin-bottom: 1rem; color: var(--text-light); transition: color 0.4s ease; }
+        .callout { background: var(--surface-strong); border-left: 4px solid var(--primary); padding: 1.25rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; backdrop-filter: blur(12px); transition: background 0.4s ease; }
+        .callout-title { font-weight: 700; display: block; margin-bottom: 0.25rem; color: var(--text); transition: color 0.4s ease; }
+        strong { color: var(--text); transition: color 0.4s ease; }
         @media (max-width: 850px) { .container { flex-direction: column; } aside { display: none; } }
     </style>
 </head>
 <body>
 
+    <div id="cursor" class="custom-cursor"></div>
+    <div id="cursor-follower" class="custom-cursor-follower"><span class="cursor-note">♪</span></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="../index.html" class="logo data-magnetic" style="text-decoration: none; color: inherit;">Re-Hearse <span class="logo-note">♪</span></a>
+            <div class="nav-links">
+                <a href="../index.html#showcase-area" class="data-magnetic">Features</a>
+                <a href="../privacy-policy/index.html" class="data-magnetic active">Policies</a>
+                <a href="../terms-of-service/index.html" class="data-magnetic">Terms</a>
+            </div>
+            <div class="nav-right">
+                <button id="theme-toggle" class="theme-toggle-btn data-magnetic" aria-label="Toggle Theme">
+                    <span class="material-symbols-outlined theme-icon">dark_mode</span>
+                </button>
+                <a href="../index.html#download" class="nav-badge data-magnetic download-btn">
+                    Join Waitlist
+                </a>
+            </div>
+        </div>
+    </nav>
+
 <header class="header">
-    <h1>Privacy Policy for Re-Hearse</h1>
+    <h1>Privacy Policy</h1>
     <span class="last-updated">Last Updated: April 2026</span>
 </header>
 
