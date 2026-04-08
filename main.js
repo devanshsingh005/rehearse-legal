@@ -17,6 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const preloader = document.getElementById('preloader');
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = themeToggle?.querySelector('.theme-icon');
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenuCard = document.getElementById('mobile-menu-card');
+    const mobileMenuLinks = Array.from(document.querySelectorAll('.mobile-menu-card a'));
     const cursorAwareElements = Array.from(document.querySelectorAll('.cursor-aware'));
     const magneticElements = Array.from(document.querySelectorAll('.data-magnetic'));
 
@@ -50,6 +53,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     themeToggle?.addEventListener('click', () => {
         applyTheme(body.classList.contains('light-mode') ? 'dark' : 'light');
+    });
+
+    const setMobileMenuOpen = (isOpen) => {
+        body.classList.toggle('mobile-menu-open', isOpen);
+        mobileMenuToggle?.setAttribute('aria-expanded', String(isOpen));
+        mobileMenuCard?.setAttribute('aria-hidden', String(!isOpen));
+    };
+
+    mobileMenuToggle?.addEventListener('click', () => {
+        setMobileMenuOpen(!body.classList.contains('mobile-menu-open'));
+    });
+
+    mobileMenuLinks.forEach((link) => {
+        link.addEventListener('click', () => setMobileMenuOpen(false));
+    });
+
+    window.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            setMobileMenuOpen(false);
+        }
     });
 
     // ==========================================

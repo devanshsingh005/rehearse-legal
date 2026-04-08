@@ -327,6 +327,11 @@ h2 {
   gap: 1rem;
 }
 
+.mobile-menu-toggle,
+.mobile-menu-card {
+  display: none;
+}
+
 .theme-toggle-btn {
   background: var(--bg-glass);
   border: 1px solid var(--border-glass);
@@ -1557,8 +1562,82 @@ h2 {
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    top: 1rem;
+    padding: 0 1rem;
+  }
+
+  .nav-inner {
+    padding: 0.55rem 0.55rem 0.55rem 1rem;
+    border-radius: 28px;
+  }
+
+  .logo {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
   .nav-links {
     display: none;
+  }
+
+  .nav-right {
+    gap: 0.55rem;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--border-glass);
+    background: var(--bg-glass);
+    color: var(--text-main);
+  }
+
+  .mobile-menu-card {
+    position: fixed;
+    top: 5.25rem;
+    left: 1rem;
+    right: 1rem;
+    z-index: 120;
+    display: grid;
+    gap: 0.6rem;
+    padding: 1rem;
+    border-radius: 22px;
+    border: 1px solid var(--border-glass);
+    background: rgba(10, 10, 10, 0.96);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.32);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 0.22s ease, transform 0.22s ease;
+  }
+
+  .mobile-menu-card a {
+    display: block;
+    text-decoration: none;
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-glass);
+    border-radius: 16px;
+    padding: 0.9rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .mobile-menu-card .mobile-menu-cta {
+    background: linear-gradient(180deg, #FFA933, #FF6B00);
+    color: #1a0f00;
+    border-color: transparent;
+  }
+
+  body.mobile-menu-open .mobile-menu-card {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
   }
 
   /* On mobile, reduce blur even further for GPU performance */
@@ -1697,5 +1776,17 @@ h2 {
 
   .float-note {
     display: none;
+  }
+
+  .mobile-menu-card {
+    top: 5rem;
+    left: 0.75rem;
+    right: 0.75rem;
+    padding: 0.85rem;
+  }
+
+  .mobile-menu-card a {
+    padding: 0.82rem 0.9rem;
+    font-size: 0.9rem;
   }
 }
