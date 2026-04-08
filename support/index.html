@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | Re-Hearse</title>
+    <meta name="description" content="Get support for Re-Hearse, including account help, upload issues, and general app assistance.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script defer src="../subpage.js"></script>
+    <style>
+        :root {
+            --primary: #ff9900;
+            --primary-deep: #ff6b00;
+            --bg: #0a0a0a;
+            --surface: rgba(255, 255, 255, 0.03);
+            --surface-strong: rgba(255, 255, 255, 0.05);
+            --text: #f0ede8;
+            --text-light: #b4aba2;
+            --border: rgba(255, 153, 0, 0.16);
+        }
+
+        body.light-mode {
+            --text: #1a1a1a;
+            --text-light: #5a5450;
+            --bg: #FAFAF8;
+            --surface: rgba(0, 0, 0, 0.03);
+            --surface-strong: rgba(0, 0, 0, 0.05);
+            --border: rgba(239, 148, 8, 0.18);
+        }
+
+        body.light-mode {
+            background-color: #FAFAF8 !important;
+            background-image:
+                radial-gradient(circle at top left, rgba(255, 153, 0, 0.07) 0%, transparent 30%),
+                radial-gradient(circle at bottom right, rgba(255, 107, 0, 0.04) 0%, transparent 26%) !important;
+            color: #1a1a1a;
+        }
+
+        body.light-mode .support-card,
+        body.light-mode .footer {
+            background: rgba(0, 0, 0, 0.03);
+        }
+
+        body.light-mode .callout {
+            background: rgba(0, 0, 0, 0.04);
+        }
+
+        body.light-mode h2,
+        body.light-mode strong,
+        body.light-mode .support-email a {
+            color: #1a1a1a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            margin: 0;
+            background-color: var(--bg);
+            background-image:
+                radial-gradient(circle at top left, rgba(255, 153, 0, 0.12) 0%, transparent 30%),
+                radial-gradient(circle at bottom right, rgba(255, 107, 0, 0.08) 0%, transparent 26%);
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 8rem 1.5rem 4rem;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 1.5rem;
+        }
+
+        .support-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 2rem;
+            backdrop-filter: blur(12px);
+            transition: background 0.4s ease, border-color 0.4s ease;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            color: var(--text);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            transition: color 0.4s ease;
+        }
+
+        p, li {
+            color: var(--text-light);
+            transition: color 0.4s ease;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+            margin: 0;
+        }
+
+        li + li {
+            margin-top: 0.8rem;
+        }
+
+        .support-email {
+            margin: 1rem 0 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .support-email a {
+            color: var(--text);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 153, 0, 0.35);
+        }
+
+        .support-email a:hover {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .callout {
+            background: var(--surface-strong);
+            border-left: 4px solid var(--primary);
+            padding: 1.25rem;
+            border-radius: 0 12px 12px 0;
+            margin-top: 1.5rem;
+            transition: background 0.4s ease;
+        }
+
+        .callout strong {
+            color: var(--text);
+            transition: color 0.4s ease;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 3rem 1.5rem 4rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-light);
+            font-size: 0.9rem;
+            background: rgba(255, 255, 255, 0.02);
+            transition: background 0.4s ease;
+        }
+
+        @media (max-width: 800px) {
+            .support-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="cursor" class="custom-cursor"></div>
+    <div id="cursor-follower" class="custom-cursor-follower"><span class="cursor-note">♪</span></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="../index.html" class="logo data-magnetic" style="text-decoration: none; color: inherit;">Re-Hearse <span class="logo-note">♪</span></a>
+            <div class="nav-links">
+                <a href="../index.html#showcase-area" class="data-magnetic">Features</a>
+                <a href="../support/index.html" class="data-magnetic active">Support</a>
+                <a href="../privacy-policy/index.html" class="data-magnetic">Policies</a>
+                <a href="../terms-of-service/index.html" class="data-magnetic">Terms</a>
+            </div>
+            <div class="nav-right">
+                <button id="theme-toggle" class="theme-toggle-btn data-magnetic" aria-label="Toggle Theme">
+                    <span class="material-symbols-outlined theme-icon">dark_mode</span>
+                </button>
+                <a href="../index.html#download" class="nav-badge data-magnetic download-btn">
+                    Join Waitlist
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="support-grid">
+            <section class="support-card">
+                <h2>How to Reach Us</h2>
+                <p class="support-email">
+                    Email: <strong><a href="mailto:devansh.singh20045@gmail.com">devansh.singh20045@gmail.com</a></strong>
+                </p>
+                <p>When you contact us, include a short description of the issue and any helpful details so we can assist you faster.</p>
+
+                <div class="callout">
+                    <strong>Helpful details to include:</strong>
+                    device model, iOS version, app version, and what happened before the issue appeared.
+                </div>
+            </section>
+
+            <section class="support-card">
+                <h2>Response Time</h2>
+                <p>We aim to respond as soon as possible, typically within 2-3 business days.</p>
+                <p>For the fastest help, use the email above and include screenshots or a clear description when relevant.</p>
+            </section>
+        </div>
+
+        <section class="support-card" style="margin-top: 1.5rem;">
+            <h2>About Re-Hearse</h2>
+            <p>Re-Hearse helps musicians work with sheet music more efficiently through upload tools, notation processing, playback support, and practice-focused features.</p>
+        </section>
+
+        <section class="support-card" style="margin-top: 1.5rem;">
+            <h2>What We Can Help With</h2>
+            <ul>
+                <li>Account access or sign-in questions</li>
+                <li>Sheet upload and processing issues</li>
+                <li>Playback, notation, or app behavior problems</li>
+                <li>General questions about how Re-Hearse works</li>
+            </ul>
+        </section>
+
+        <section class="support-card" style="margin-top: 1.5rem;">
+            <h2>Basic Troubleshooting</h2>
+            <ul>
+                <li>Make sure your app is updated to the latest available version.</li>
+                <li>Check that your device is running a supported version of iOS.</li>
+                <li>Try closing and reopening the app if a screen becomes unresponsive.</li>
+                <li>For upload issues, confirm the file is clear, complete, and readable before retrying.</li>
+            </ul>
+        </section>
+
+        <section class="support-card" style="margin-top: 1.5rem;">
+            <h2>Account and Data Help</h2>
+            <p>If you need help with account access, uploaded files, or privacy-related questions, contact us at <strong><a href="mailto:devansh.singh20045@gmail.com">devansh.singh20045@gmail.com</a></strong>.</p>
+            <p>For privacy details, you can also review our <a href="../privacy-policy/index.html">Privacy Policy</a>.</p>
+        </section>
+    </div>
+
+    <footer class="footer">
+        &copy; 2026 Re-Hearse.
+    </footer>
+
+</body>
+</html>
